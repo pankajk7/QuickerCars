@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="color">Color:</string>
+    <string name="cc">CC:</string>
+    <string name="type">Type:</string>
+    <string name="abs">ABS:</string>
+    <string name="mileage">Mileage:</string>
+</resources>
