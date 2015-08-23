@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/fragment_mainActivity"
-        android:name="com.pankaj.quicker.fragments.CarListingFragment"
+     
+     <LinearLayout 
+        android:id="@+id/layout_main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:orientation="vertical">
+    </LinearLayout>
 
 </LinearLayout>

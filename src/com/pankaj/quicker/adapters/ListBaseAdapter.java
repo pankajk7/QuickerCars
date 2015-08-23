@@ -1,6 +1,7 @@
 package com.pankaj.quicker.adapters;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.pankaj.quicker.R;
 import com.pankaj.quicker.modal.CarInfo;
@@ -10,24 +11,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ListBaseAdapter<T> extends BaseAdapter {
 
 	Context context;
-	ArrayList<T> arrayList;
+	List<?> arrayList;
 	LayoutInflater inflater;
 
-	public ListBaseAdapter(Context context, ArrayList<T> arrayList) {
+	public ListBaseAdapter(Context context, List<?> arrayList) {
 		this.context = context;
 		this.arrayList = arrayList;
 		inflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
+	public void addList(List<?> arrayList){
+		this.arrayList = new ArrayList<CarInfo>();
+		this.arrayList = arrayList;
+		notifyDataSetChanged();
+	}
+	
+	public List<?> getList(){
+		return arrayList;
+	}
+	
 	@Override
 	public int getCount() {
 		if (arrayList != null) {
@@ -58,7 +66,6 @@ public class ListBaseAdapter<T> extends BaseAdapter {
 					.findViewById(R.id.textview_name);
 			holder.inappTextView = (TextView) convertView
 					.findViewById(R.id.textview_inapp);
-			// holder.imageVie
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
@@ -66,7 +73,7 @@ public class ListBaseAdapter<T> extends BaseAdapter {
 
 		if(arrayList.get(position) instanceof CarInfo){
 			CarInfo obj = (CarInfo) arrayList.get(position);
-			holder.nameTextView.setText(obj.getName());
+			holder.nameTextView.setText(obj.getName() +", "+obj.getBrand());
 
 			Resources res = context.getResources();
 			String inapp = String.format(res.getString(R.string.rupee),

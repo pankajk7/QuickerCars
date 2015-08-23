@@ -4,13 +4,107 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <EditText 
+        style="@style/textviewstyle_Medium.black"
+        android:id="@+id/editText_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0"
+        android:layout_margin="5dp"
+        android:hint="Search by Car name, brand or type"
+        android:padding="5dp"
+        android:background="@drawable/textview_round_corner"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+    
     <ListView
-        android:id="@+id/listview_carInfo"
+        android:id="@+id/listview_listCars"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:divider="@color/background_color"
         android:dividerHeight="1dp"
         android:fastScrollEnabled="true" >
     </ListView>
 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="vertical">
+        <TextView 
+            style="@style/textviewstyle_Medium.light"
+            android:id="@+id/textView_listCars_apiHit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            android:gravity="center_vertical"
+            android:text="@string/api_hit"/>
+        
+        <Button 
+                    android:id="@+id/button_listCars_listAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/list_all"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_selector_sort"/>
+        </LinearLayout>
+       <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal" >
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:layout_marginRight="2dp"
+                    android:background="@color/sort_by_background"
+                    android:gravity="center">
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/SortBy"
+                        android:textSize="10sp"
+                        android:textColor="@color/sort_by_color"/>
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="0">
+                <Button 
+                    android:id="@+id/button_listCars_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/price"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_selector_sort"/>
+                
+               <Button 
+                    android:id="@+id/button_listCars_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/Rating"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_selector_sort"/>
+               </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 </LinearLayout>

@@ -14,6 +14,8 @@
     
     <color name="quicker_theme_blue_color">#007CC4</color>
     <color name="quicker_theme_green_color">#4E9033</color>
+    <color name="quicker_theme_green_dark_color">#366423</color>
+    
     
     <color name="button_home_pressed">#FF5304</color>
     <color name="button_home_normal">#FB7750</color>
@@ -26,4 +28,6 @@
   <color name="pie_chart_light_green">#C5FF8C</color>
   <color name="pie_chart_light_yellow">#FFF78C</color>
   <color name="pie_chart_light_orange">#FFD28C</color>
+  
+  <color name="description_background">#FAEABB</color>
 </resources>

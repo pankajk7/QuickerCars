@@ -2,19 +2,18 @@
 <resources>
 
     <string name="app_name">QuickCars</string>
-    <string name="hello_world">Hello world!</string>
 
     <string name="rupee">%1$s</string>
     
+    <string name="api_hit">No. of API hits: %1$s</string>
+    
     <string name="Name">Name</string>
-    <string name="ProductCount">Product count:%1$d</string>
     <string name="Type">Type</string>
-    <string name="InAppPurchase">In-App purchase</string>
-    <string name="Last_updated">Last updated</string>
+    <string name="price">Price</string>
     <string name="Rating">Rating</string>
     <string name="SortBy">Sort-by</string>
-    <string name="AppStore">App store</string>
     <string name="back">Back</string>
-    <string name="share">Share</string>
     <string name="sms">SMS</string>
+    <string name="list_all">List All</string>
+    
 </resources>

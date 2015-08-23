@@ -1,6 +1,9 @@
 package com.pankaj.quicker.utils;
 
 import android.app.Activity;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 public class AlertMessage {
@@ -27,7 +30,7 @@ public class AlertMessage {
 		if (toast.getView() != null) {
 			toast.setText(message);
 		} else {
-			toast = Toast.makeText(activity, message, Toast.LENGTH_LONG);
+			toast = Toast.makeText(activity, message, Toast.LENGTH_SHORT);
 		}
 		toast.show();
 	}

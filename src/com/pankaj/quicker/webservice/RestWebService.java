@@ -49,18 +49,23 @@ public class RestWebService {
 	}
 
 
-	public void serviceCall(String resourceName, String extraParameters) {
+	public void serviceCall(String resourceName, String extraParameters, boolean showLoading) {
 		String url = getServiceURL(resourceName, extraParameters);
+		if(showLoading){
+			if(!transparentProgressDialog.isShowing()){
+				transparentProgressDialog.show();
+			}
+		}
 
 		if (resourceName.equalsIgnoreCase(Constants.API_GET_CAR_INFO)) {
+			getCall(url);
+		} else if (resourceName.equalsIgnoreCase(Constants.API_GET_API_HITS)) {
 			getCall(url);
 		}
 
 	}
 
 	private void getCall(String url) {
-		transparentProgressDialog.show();
-		
 		StringRequest req = new StringRequest(Method.GET, url, new Response.Listener<String>() {
 
 			@Override

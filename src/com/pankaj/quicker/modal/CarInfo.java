@@ -18,6 +18,12 @@ public class CarInfo implements Serializable{
 	String link;
 	City[] cities;
 	
+	@Override
+	public String toString() {
+		return "Name: "+ name + "\n Brand: " + brand + "\n Type: " + type +
+				"\n Engine: "+ engine_cc + "\n Mileage: " + mileage + 
+				"\n Abs: " + abs_exist + "\n Description: " + description;
+	}
 	public String getName() {
 		return name;
 	}

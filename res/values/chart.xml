@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string name="pie_chart_light_blue">#8CEBFF</string>
+  <string name="pie_chart_light_green">#C5FF8C</string>
+  <string name="pie_chart_light_yellow">#FFF78C</string>
+  <string name="pie_chart_light_orange">#FFD28C</string>
+    
+  
+    <string-array name="pie_chart_colors">
+        <item>@string/pie_chart_light_blue</item>
+        <item>@string/pie_chart_light_green</item>
+        <item>@string/pie_chart_light_yellow</item>
+        <item>@string/pie_chart_light_orange</item>
+    </string-array>
+    
+    <string name="share">Share</string>
+    <string name="share_title">Share Quicker cars details with - </string>
+</resources>

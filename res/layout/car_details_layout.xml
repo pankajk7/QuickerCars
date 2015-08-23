@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/productDetails_rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/imageView_carInfo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_uploading" />
+
+            <TextView
+                android:id="@+id/textView_carInfo_description"
+                style="@style/textviewstyle_small.black.bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:background="@drawable/description_round_corner"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textview_carInfo_name"
+                    style="@style/textviewstyle_MediumBig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/Name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical" >
+
+                            <com.pankaj.quicker.utils.TextAwesome
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="@string/fa_star"
+                                android:textColor="@color/header_text_color"
+                                android:textSize="14sp" >
+                            </com.pankaj.quicker.utils.TextAwesome>
+
+                            <TextView
+                                android:id="@+id/textView_carInfo_rating"
+                                style="@style/textviewstyle_Medium.light"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="3" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            style="@style/textviewstyle_Medium.light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="0"
+                            android:gravity="center"
+                            android:text="@string/color" />
+
+                        <View
+                            android:id="@+id/view_carInfo_color"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="7dp"
+                            android:background="@drawable/view_round_corner" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <TextView
+                                style="@style/textviewstyle_Medium.light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:gravity="center_vertical"
+                                android:text="@string/cc" />
+
+                            <TextView
+                                android:id="@+id/textView_carInfo_cc"
+                                style="@style/textviewstyle_Medium.light"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="3" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            style="@style/textviewstyle_Medium.light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="0"
+                            android:gravity="center_vertical"
+                            android:text="@string/type" />
+
+                        <TextView
+                            android:id="@+id/textView_carInfo_type"
+                            style="@style/textviewstyle_Medium.light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <TextView
+                                style="@style/textviewstyle_Medium.light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0"
+                                android:gravity="center_vertical"
+                                android:text="@string/abs" />
+
+                            <TextView
+                                android:id="@+id/textView_carInfo_abs"
+                                style="@style/textviewstyle_Medium.light"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="7dp"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="3" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            style="@style/textviewstyle_Medium.light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:layout_weight="0"
+                            android:gravity="center_vertical"
+                            android:text="@string/mileage" />
+
+                        <TextView
+                            android:id="@+id/textView_carInfo_mileage"
+                            style="@style/textviewstyle_Medium.light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="7dp"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
